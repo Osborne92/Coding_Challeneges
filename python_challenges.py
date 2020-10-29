@@ -29,3 +29,7 @@ class Shuffle:
             nums_list.append(f)
             nums_list.append(s)
         return nums_list
+
+class Defanged_IP:
+    def defangIPaddr(self, address):
+        return address.replace('.', '[.]')
