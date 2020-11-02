@@ -63,4 +63,14 @@ class Reduce_to_Zero:
                 num -= 1
             count_of_steps += 1
         return count_of_steps
+
+class String_Shuffle:
+    def restoreString(self, s, indices):
+        
+        s_list = list(s) #creates a list from the s variable
+        list_length = len(s) #list_length list will be used to iterate though s
+        
+        for i in range(list_length):
+            s_list[indices[i]] = s[i] #the indices of s_list are equal to the s from the list_length iterater order  
+        return "".join(s_list) #combines string letters of s_list into single string
         
