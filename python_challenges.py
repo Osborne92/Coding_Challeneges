@@ -73,4 +73,15 @@ class String_Shuffle:
         for i in range(list_length):
             s_list[indices[i]] = s[i] #the indices of s_list are equal to the s from the list_length iterater order  
         return "".join(s_list) #combines string letters of s_list into single string
+
+class Solution:
+    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
         
+        answer = []
+        for num in nums:
+            count = 0
+            for comp in nums: #comp will be execute a full loop for each iteration of num
+                if num > comp:
+                    count += 1
+            answer.append(count)
+        return answer        
