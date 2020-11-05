@@ -75,7 +75,7 @@ class String_Shuffle:
         return "".join(s_list) #combines string letters of s_list into single string
 
 class Solution:
-    def smallerNumbersThanCurrent(self, nums: List[int]) -> List[int]:
+    def smallerNumbersThanCurrent(self, nums):
         
         answer = []
         for num in nums:
@@ -84,4 +84,18 @@ class Solution:
                 if num > comp:
                     count += 1
             answer.append(count)
-        return answer        
+        return answer
+
+class Solution:
+    def subtractProductAndSum(self, n: int) -> int:
+        
+        summ = 0
+        mult = 1
+        digits = [int(x) for x in str(n)]
+        
+        for i in digits:
+            summ = summ + i
+        for i in digits:
+            mult = mult * i
+        return mult - summ
+                    
